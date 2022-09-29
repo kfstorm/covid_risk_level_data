@@ -22,6 +22,7 @@ def get_target_log(driver):
         ):
             return log
 
+
 def parse_response(log):
     print(json.dumps(log, indent=2))
     body = json.loads(driver.execute_cdp_cmd('Network.getResponseBody', {'requestId': log["params"]["requestId"]})["body"])
@@ -30,8 +31,21 @@ def parse_response(log):
     if code != 0:
         raise Exception(f"Bad data. code: {code}. msg: {msg}")
     data = body["data"]
+    normalize_data(data)
     with open("data.json", "w") as f:
         f.write(json.dumps(data, indent=2, ensure_ascii=False))
+
+
+def normalize_data(data):
+    """Sort lists for easier diffing"""
+    def sort_list(risk_list):
+        risk_list.sort(key=lambda x: (x["province"], x["city"], x["county"], x["area_name"]))
+        for item in risk_list:
+            item["communitys"].sort()
+
+    sort_list(data["highlist"])
+    sort_list(data["middlelist"])
+    sort_list(data["lowlist"])
 
 
 with webdriver.Chrome(service=service, desired_capabilities=capabilities) as driver:
