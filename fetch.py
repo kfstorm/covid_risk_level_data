@@ -2,6 +2,7 @@ import json
 import time
 
 from selenium.webdriver.chrome.service import Service
+from selenium.webdriver import ChromeOptions
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
@@ -10,6 +11,9 @@ from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 service = Service(executable_path=ChromeDriverManager().install())
 capabilities = DesiredCapabilities.CHROME
 capabilities["goog:loggingPrefs"] = {"performance": "ALL"}
+options = ChromeOptions()
+options.add_argument("--headless")
+options.add_argument("--disable-dev-shm-usage")
 
 def get_target_log(driver):
     print(driver.title)
@@ -48,7 +52,7 @@ def normalize_data(data):
     sort_list(data["lowlist"])
 
 
-with webdriver.Chrome(service=service, desired_capabilities=capabilities) as driver:
+with webdriver.Chrome(service=service, desired_capabilities=capabilities, options=options) as driver:
     driver.get("http://bmfw.www.gov.cn/yqfxdjcx/risk.html")
     start_time = time.time()
     log = None
