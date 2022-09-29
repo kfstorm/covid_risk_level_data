@@ -1,0 +1,17 @@
+name: 'Update list'
+on:
+  schedule:
+    - "5 * * * *"
+jobs:
+  update-list:
+    runs-on: ["ubuntu-latest"]
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Fetch latest list
+        run: ./fetch.sh
+
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Automated update
+          file_pattern: "*.json"
