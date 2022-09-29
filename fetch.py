@@ -12,6 +12,7 @@ capabilities = DesiredCapabilities.CHROME
 capabilities["goog:loggingPrefs"] = {"performance": "ALL"}
 
 def get_target_log(driver):
+    print(driver.title)
     logs = driver.get_log("performance")
     for entry in logs:
         log = json.loads(entry["message"])["message"]
@@ -22,6 +23,7 @@ def get_target_log(driver):
             return log
 
 def parse_response(log):
+    print(json.dumps(log, indent=2))
     body = json.loads(driver.execute_cdp_cmd('Network.getResponseBody', {'requestId': log["params"]["requestId"]})["body"])
     code = body["code"]
     msg = body["msg"]
@@ -39,7 +41,8 @@ with webdriver.Chrome(service=service, desired_capabilities=capabilities) as dri
     while time.time() - start_time < 60:
         try:
             log = get_target_log(driver)
-            break
+            if log:
+                break
         except Exception as e:
             print(e)
             time.sleep(1)
