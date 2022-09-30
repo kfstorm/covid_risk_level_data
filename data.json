@@ -1,8 +1,8 @@
 {
-  "end_update_time": "2022-09-30 21时",
+  "end_update_time": "2022-09-30 23时",
   "hcount": 846,
-  "mcount": 721,
-  "lcount": 137,
+  "mcount": 720,
+  "lcount": 136,
   "highlist": [
     {
       "type": "2",
@@ -2695,16 +2695,6 @@
     },
     {
       "type": "2",
-      "province": "青海省",
-      "city": "海西蒙古族藏族自治州",
-      "county": "茫崖市",
-      "area_name": "青海省 海西蒙古族藏族自治州 茫崖市",
-      "communitys": [
-        "中铁青藏集团公司花土沟站"
-      ]
-    },
-    {
-      "type": "2",
       "province": "黑龙江省",
       "city": "佳木斯市",
       "county": "东风区",
@@ -4120,16 +4110,6 @@
       "area_name": "青海省 海西蒙古族藏族自治州 格尔木市",
       "communitys": [
         "格尔木市除中高风险区外"
-      ]
-    },
-    {
-      "type": "2",
-      "province": "青海省",
-      "city": "海西蒙古族藏族自治州",
-      "county": "茫崖市",
-      "area_name": "青海省 海西蒙古族藏族自治州 茫崖市",
-      "communitys": [
-        "海西州茫崖市除中风险区外"
       ]
     },
     {
