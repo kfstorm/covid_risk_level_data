@@ -1,8 +1,8 @@
 {
-  "end_update_time": "2022-11-12 09时",
-  "hcount": 3935,
-  "mcount": 3509,
-  "lcount": 455,
+  "end_update_time": "2022-11-12 10时",
+  "hcount": 3933,
+  "mcount": 3508,
+  "lcount": 454,
   "highlist": [
     {
       "type": "2",
@@ -5182,17 +5182,6 @@
       "area_name": "贵州省 铜仁市 万山区",
       "communitys": [
         "仁山街道铜仁购·义乌城"
-      ]
-    },
-    {
-      "type": "2",
-      "province": "贵州省",
-      "city": "铜仁市",
-      "county": "碧江区",
-      "area_name": "贵州省 铜仁市 碧江区",
-      "communitys": [
-        "河西街道北关安置区2栋",
-        "河西街道杨代玉妇科诊所"
       ]
     },
     {
@@ -11381,16 +11370,6 @@
     },
     {
       "type": "2",
-      "province": "贵州省",
-      "city": "铜仁市",
-      "county": "碧江区",
-      "area_name": "贵州省 铜仁市 碧江区",
-      "communitys": [
-        "河西街道北关安置区1、3、4栋"
-      ]
-    },
-    {
-      "type": "2",
       "province": "辽宁省",
       "city": "丹东市",
       "county": "东港市",
@@ -16017,16 +15996,6 @@
     },
     {
       "type": "2",
-      "province": "贵州省",
-      "city": "铜仁市",
-      "county": "碧江区",
-      "area_name": "贵州省 铜仁市 碧江区",
-      "communitys": [
-        "除中、高风险区以外的其他区域"
-      ]
-    },
-    {
-      "type": "2",
       "province": "辽宁省",
       "city": "丹东市",
       "county": "东港市",
@@ -16488,7 +16457,7 @@
       "county": "高陵区",
       "area_name": "陕西省 西安市 高陵区",
       "communitys": [
-        "高凌区除中高风险区以外地区"
+        "高陵区除中高风险区以外地区"
       ]
     },
     {
