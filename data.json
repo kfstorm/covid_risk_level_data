@@ -2,7 +2,7 @@
   "end_update_time": "2022-11-19 17时",
   "hcount": 13217,
   "mcount": 0,
-  "lcount": 801,
+  "lcount": 802,
   "highlist": [
     {
       "type": "2",
@@ -19988,6 +19988,16 @@
       "area_name": "北京市 昌平区 沙河（地区）镇",
       "communitys": [
         "沙河镇（除高风险外其他区域）"
+      ]
+    },
+    {
+      "type": "2",
+      "province": "北京市",
+      "city": "朝阳区",
+      "county": "呼家楼街道",
+      "area_name": "北京市 朝阳区 呼家楼街道",
+      "communitys": [
+        "朝阳区（除高风险区外的其他地区）"
       ]
     },
     {
